@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Niteesh Kumar Patel — SRE · Cloud Engineer · DevOps</title>
   <meta name="description" content="Site Reliability Engineer | 4+ years | AWS · GCP · New Relic · Prometheus · Grafana · Kubernetes · Python | Open to SRE, DevOps, Cloud Engineering & Product Support roles.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Niteesh Kumar Patel — Site Reliability Engineer">
+  <meta property="og:description" content="SRE with 4+ years across observability, incident management and cloud operations. AWS · GCP · New Relic · Prometheus · Grafana.">
+  <meta property="og:url" content="https://niteeshkumarpatel.netlify.app">
+  <meta property="og:image" content="https://niteeshkumarpatel.netlify.app/me.png">
+  <meta name="theme-color" content="#080c18">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080c18'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='28' font-weight='700' text-anchor='middle' fill='%23a5b4fc'%3ENKP%3C/text%3E%3C/svg%3E">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Niteesh Kumar Patel","jobTitle":"Site Reliability Engineer","worksFor":{"@type":"Organization","name":"Kissht"},"url":"https://niteeshkumarpatel.netlify.app","email":"mailto:niteeshnkp03@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Noida","addressRegion":"Uttar Pradesh","addressCountry":"IN"},"sameAs":["https://www.linkedin.com/in/niteeshkpatel","https://github.com/niteeshnkp03g"],"knowsAbout":["Site Reliability Engineering","Observability","New Relic","Prometheus","Grafana","AWS","GCP","Incident Management"]}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -12,6 +22,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#about">Skip to content</a>
 
 <div class="cursor" id="cursor"></div>
 <div class="cursor-dot" id="cursorDot"></div>
@@ -27,7 +38,7 @@
     <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
     <li><a href="#contact"  class="nav-link" data-section="contact">Contact</a></li>
   </ul>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -66,7 +77,7 @@
         Observability &nbsp;·&nbsp; Incident Management &nbsp;·&nbsp; Cloud Operations
       </p>
       <div class="hero-cta reveal-up" style="--d:0.3s">
-        <a href="Resume.pdf" target="_blank" class="btn-primary">
+        <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary">
           <i class="fa fa-download"></i> Download Resume
         </a>
         <a href="#contact" class="btn-ghost">
@@ -74,9 +85,9 @@
         </a>
       </div>
       <div class="hero-socials reveal-up" style="--d:0.38s">
-        <a href="https://www.linkedin.com/in/niteeshkpatel" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/niteeshnkp03g" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/niteesh.kumarpatel/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/niteeshkpatel" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/niteeshnkp03g" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/niteesh.kumarpatel/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
 
@@ -106,7 +117,7 @@
         </div>
         <div class="stat-card">
           <div class="stat-num" data-target="60" data-suffix="%">0</div>
-          <div class="stat-label">MTTR Down</div>
+          <div class="stat-label">MTTD Down</div>
         </div>
       </div>
     </div>
@@ -136,7 +147,7 @@
           SRE with <strong>4+ years</strong> keeping enterprise systems alive at scale — 30,000+ servers, 99.9% uptime, and 250+ incidents resolved monthly without missing SLA.
         </p>
         <p class="about-body">
-          Currently at <strong>Kissht</strong>, I own the full observability stack — Prometheus, Grafana, New Relic APM and Sentry. I automated Python-based log pipelines that cut troubleshooting effort by <strong>90%</strong>, reduced MTTR by <strong>60%</strong>, and I implement distributed tracing and synthetic monitoring to catch failures before users ever notice them.
+          Currently at <strong>Kissht</strong>, I own the full observability stack — Prometheus, Grafana, New Relic APM and Sentry. I automated Python-based log pipelines that cut troubleshooting effort by <strong>70%</strong>, cut detection time (MTTD) by <strong>60%</strong> with threshold-based alerting, so incidents get resolved sooner, and I implement distributed tracing and synthetic monitoring to catch failures before users ever notice them. I also wired Claude (LLM) into New Relic, Grafana and Sentry to speed up root cause analysis during incident triage.
         </p>
         <p class="about-body">
           At <strong>HCL Technologies</strong> (client: State Street Corp) I provided L2/L3 production support across WebSphere (WAS) and Apache HTTP servers — diagnosing incidents via Log4j logs, heap &amp; thread dump analysis and Dynatrace distributed traces. I automated patch management and health checks (Python/Bash) saving <strong>40% of manual effort</strong>, and supported zero-downtime AWS migrations and CI/CD pipelines in Harness.
@@ -154,6 +165,8 @@
           <div class="comp-item"><i class="fa fa-check"></i> Production Automation (Python)</div>
           <div class="comp-item"><i class="fa fa-check"></i> Containerisation (Docker/K8s)</div>
           <div class="comp-item"><i class="fa fa-check"></i> Cloud Security &amp; IAM</div>
+          <div class="comp-item"><i class="fa fa-check"></i> Serverless Alerting (Lambda · API Gateway)</div>
+          <div class="comp-item"><i class="fa fa-check"></i> AI-Assisted RCA (LLM)</div>
         </div>
       </div>
 
@@ -174,7 +187,7 @@
               <div class="vc-icon" style="--ic:#10b981"><i class="fa fa-robot"></i></div>
               <div>
                 <strong>Automate Every Repeat</strong>
-                <p>Every recurring incident becomes a script. 90% effort savings at Kissht proves it.</p>
+                <p>Every recurring incident becomes a script. 70% effort savings at Kissht proves it.</p>
               </div>
             </div>
             <div class="vc-item">
@@ -213,11 +226,11 @@
     <div class="impact-strip reveal-up" style="--d:0.1s">
       <div class="impact-item">
         <span class="impact-num">60%</span>
-        <span class="impact-label">MTTR reduced via observability stack at Kissht</span>
+        <span class="impact-label">Faster detection (MTTD) at Kissht, so incidents are resolved sooner</span>
       </div>
       <div class="impact-div"></div>
       <div class="impact-item">
-        <span class="impact-num">90%</span>
+        <span class="impact-num">70%</span>
         <span class="impact-label">Troubleshooting effort saved via Python automation</span>
       </div>
       <div class="impact-div"></div>
@@ -240,7 +253,7 @@
     <div class="section-header">
       <span class="section-tag">02 — Skills</span>
       <h2 class="section-title">Technical Toolkit</h2>
-      <p class="section-sub">Skills I use daily in production. Terraform &amp; Ansible are listed separately — I'm exploring them but don't yet have hands-on production experience.</p>
+      <p class="section-sub">Skills I use daily in production. Advanced = I own it day to day, Proficient = regular production use, Working = hands-on and still growing. Terraform &amp; Ansible are listed separately — I'm exploring them but don't yet have hands-on production experience.</p>
     </div>
 
     <!-- Tool logo strip -->
@@ -257,6 +270,9 @@
       <div class="tool-chip"><i class="fa fa-terminal"></i><span>Bash</span></div>
       <div class="tool-chip"><i class="fab fa-git-alt"></i><span>Git</span></div>
       <div class="tool-chip"><i class="fa fa-database"></i><span>MySQL</span></div>
+      <div class="tool-chip"><i class="fa fa-bolt"></i><span>AWS Lambda</span></div>
+      <div class="tool-chip"><i class="fab fa-slack"></i><span>Slack</span></div>
+      <div class="tool-chip"><i class="fa fa-file-code"></i><span>Apps Script</span></div>
     </div>
 
     <div class="skills-categories reveal-up" style="--d:0.05s">
@@ -273,7 +289,7 @@
       <div class="skill-bar reveal-up" style="--d:0s" data-cat="observability">
         <div class="skill-meta">
           <span class="skill-name">New Relic APM &amp; NRQL Alerting</span>
-          <span class="skill-pct">82%</span>
+          <span class="skill-pct">Advanced</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="82"></div></div>
       </div>
@@ -281,7 +297,7 @@
       <div class="skill-bar reveal-up" style="--d:0.04s" data-cat="observability">
         <div class="skill-meta">
           <span class="skill-name">Prometheus &amp; Grafana</span>
-          <span class="skill-pct">78%</span>
+          <span class="skill-pct">Proficient</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="78"></div></div>
       </div>
@@ -289,7 +305,7 @@
       <div class="skill-bar reveal-up" style="--d:0.08s" data-cat="observability">
         <div class="skill-meta">
           <span class="skill-name">Log4j &amp; Apache Log Analysis</span>
-          <span class="skill-pct">80%</span>
+          <span class="skill-pct">Advanced</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="80"></div></div>
       </div>
@@ -297,7 +313,7 @@
       <div class="skill-bar reveal-up" style="--d:0.12s" data-cat="observability">
         <div class="skill-meta">
           <span class="skill-name">Dynatrace &amp; Distributed Tracing</span>
-          <span class="skill-pct">75%</span>
+          <span class="skill-pct">Proficient</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="75"></div></div>
       </div>
@@ -305,7 +321,7 @@
       <div class="skill-bar reveal-up" style="--d:0.16s" data-cat="observability">
         <div class="skill-meta">
           <span class="skill-name">Synthetic Monitoring</span>
-          <span class="skill-pct">72%</span>
+          <span class="skill-pct">Proficient</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="72"></div></div>
       </div>
@@ -313,16 +329,25 @@
       <div class="skill-bar reveal-up" style="--d:0.2s" data-cat="observability">
         <div class="skill-meta">
           <span class="skill-name">ELK Stack · Splunk · Sentry</span>
-          <span class="skill-pct">65%</span>
+          <span class="skill-pct">Working</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="65"></div></div>
+      </div>
+
+
+      <div class="skill-bar reveal-up" style="--d:0.22s" data-cat="observability">
+        <div class="skill-meta">
+          <span class="skill-name">AI-Assisted RCA (Claude + New Relic · Grafana · Sentry)</span>
+          <span class="skill-pct">Proficient</span>
+        </div>
+        <div class="skill-track"><div class="skill-fill" data-w="70"></div></div>
       </div>
 
       <!-- ── CLOUD & INFRA ── -->
       <div class="skill-bar reveal-up" style="--d:0.24s" data-cat="cloud">
         <div class="skill-meta">
           <span class="skill-name">WebSphere (WAS) &amp; Apache HTTP Server</span>
-          <span class="skill-pct">82%</span>
+          <span class="skill-pct">Advanced</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="82"></div></div>
       </div>
@@ -330,7 +355,7 @@
       <div class="skill-bar reveal-up" style="--d:0.28s" data-cat="cloud">
         <div class="skill-meta">
           <span class="skill-name">AWS (EC2, Lambda, API GW, S3, IAM)</span>
-          <span class="skill-pct">78%</span>
+          <span class="skill-pct">Proficient</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="78"></div></div>
       </div>
@@ -338,7 +363,7 @@
       <div class="skill-bar reveal-up" style="--d:0.32s" data-cat="cloud">
         <div class="skill-meta">
           <span class="skill-name">GCP (Compute, GKE, Cloud Ops)</span>
-          <span class="skill-pct">68%</span>
+          <span class="skill-pct">Working</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="68"></div></div>
       </div>
@@ -346,16 +371,24 @@
       <div class="skill-bar reveal-up" style="--d:0.36s" data-cat="cloud">
         <div class="skill-meta">
           <span class="skill-name">Load Balancers · VM Management · Networking</span>
-          <span class="skill-pct">72%</span>
+          <span class="skill-pct">Proficient</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="72"></div></div>
+      </div>
+
+      <div class="skill-bar reveal-up" style="--d:0.38s" data-cat="cloud">
+        <div class="skill-meta">
+          <span class="skill-name">Serverless Alerting (Lambda · API Gateway · Slack)</span>
+          <span class="skill-pct">Proficient</span>
+        </div>
+        <div class="skill-track"><div class="skill-fill" data-w="75"></div></div>
       </div>
 
       <!-- ── DEVOPS & CI/CD ── -->
       <div class="skill-bar reveal-up" style="--d:0.4s" data-cat="devops">
         <div class="skill-meta">
           <span class="skill-name">Docker (containerisation &amp; ops)</span>
-          <span class="skill-pct">68%</span>
+          <span class="skill-pct">Working</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="68"></div></div>
       </div>
@@ -363,7 +396,7 @@
       <div class="skill-bar reveal-up" style="--d:0.44s" data-cat="devops">
         <div class="skill-meta">
           <span class="skill-name">Kubernetes (deployment &amp; ops)</span>
-          <span class="skill-pct">62%</span>
+          <span class="skill-pct">Working</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="62"></div></div>
       </div>
@@ -371,7 +404,7 @@
       <div class="skill-bar reveal-up" style="--d:0.48s" data-cat="devops">
         <div class="skill-meta">
           <span class="skill-name">CI/CD — Harness · Jenkins · GitHub Actions</span>
-          <span class="skill-pct">65%</span>
+          <span class="skill-pct">Working</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="65"></div></div>
       </div>
@@ -379,7 +412,7 @@
       <div class="skill-bar reveal-up" style="--d:0.52s" data-cat="devops">
         <div class="skill-meta">
           <span class="skill-name">Git &amp; GitHub</span>
-          <span class="skill-pct">70%</span>
+          <span class="skill-pct">Proficient</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="70"></div></div>
       </div>
@@ -388,7 +421,7 @@
       <div class="skill-bar reveal-up" style="--d:0.56s" data-cat="dev">
         <div class="skill-meta">
           <span class="skill-name">Python (automation, log parsing, Lambda)</span>
-          <span class="skill-pct">68%</span>
+          <span class="skill-pct">Working</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="68"></div></div>
       </div>
@@ -396,7 +429,7 @@
       <div class="skill-bar reveal-up" style="--d:0.6s" data-cat="dev">
         <div class="skill-meta">
           <span class="skill-name">Bash / Shell Scripting</span>
-          <span class="skill-pct">72%</span>
+          <span class="skill-pct">Proficient</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="72"></div></div>
       </div>
@@ -404,7 +437,7 @@
       <div class="skill-bar reveal-up" style="--d:0.64s" data-cat="dev">
         <div class="skill-meta">
           <span class="skill-name">MySQL · SQL Server · Oracle (CRUD, backup)</span>
-          <span class="skill-pct">65%</span>
+          <span class="skill-pct">Working</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="65"></div></div>
       </div>
@@ -451,17 +484,18 @@
               </span>
             </div>
             <ul class="tl-list">
-              <li>Built observability stack (Prometheus, Grafana, New Relic) — <strong>MTTR reduced by 60%</strong>, minimising manual effort.</li>
-              <li>Automated Python-based log analysis &amp; Sentry ingestion — troubleshooting effort cut by <strong>90%</strong>, alert noise reduced.</li>
+              <li>Built unified Prometheus, Grafana and New Relic alerting for proactive, threshold-based detection — cut <strong>MTTD by 60%</strong>, so incidents were picked up sooner and resolved faster (lower MTTR).</li>
+              <li>Automated Python-based log analysis &amp; Sentry ingestion — troubleshooting effort cut by <strong>70%</strong>, alert noise reduced.</li>
               <li>Implemented <strong>distributed tracing</strong> and <strong>synthetic monitoring</strong> for proactive failure detection.</li>
-              <li>Supported <strong>100+ feature releases</strong> with pre/post-deployment monitoring and stability validation.</li>
+              <li>Coordinated <strong>200+ feature releases</strong>, migrations and bug-fix deployments end-to-end, validating stability before and after each deploy.</li>
               <li>Monitored end-to-end user journeys via Metabase, Percept and Clarity session recordings.</li>
+              <li>Integrated <strong>Claude (LLM)</strong> with New Relic, Grafana and Sentry to speed up root cause analysis during incident triage.</li>
               <li>Led structured RCA and implemented preventive remediation playbooks, improving platform reliability.</li>
               <li>Executed instance refresh operations and post-change validation ensuring SLA compliance.</li>
             </ul>
             <div class="tl-tools">
               <span>Prometheus</span><span>Grafana</span><span>New Relic</span><span>Sentry</span>
-              <span>Python</span><span>Distributed Tracing</span><span>Synthetic Monitoring</span>
+              <span>Python</span><span>Distributed Tracing</span><span>Synthetic Monitoring</span><span>Claude (LLM) RCA</span>
             </div>
           </div>
         </div>
@@ -536,11 +570,11 @@
         <div class="achievements-grid">
           <div class="achieve-card reveal-up" style="--d:0s">
             <div class="achieve-icon" style="--ac:#6366f1"><i class="fa fa-clock"></i></div>
-            <div><strong>60% MTTR Reduction</strong><p>Prometheus · Grafana · New Relic @ Kissht</p></div>
+            <div><strong>60% Faster Detection</strong><p>MTTD down, quicker resolution · Prometheus · Grafana · New Relic</p></div>
           </div>
           <div class="achieve-card reveal-up" style="--d:0.08s">
             <div class="achieve-icon" style="--ac:#10b981"><i class="fa fa-robot"></i></div>
-            <div><strong>90% Effort Saved</strong><p>Python log automation + Sentry optimisation</p></div>
+            <div><strong>70% Effort Saved</strong><p>Python log automation + Sentry optimisation</p></div>
           </div>
           <div class="achieve-card reveal-up" style="--d:0.16s">
             <div class="achieve-icon" style="--ac:#f59e0b"><i class="fa fa-server"></i></div>
@@ -562,15 +596,14 @@
 
         <h3 class="col-title mt-section"><i class="fa fa-certificate"></i> Certifications</h3>
         <div class="cert-grid">
-          <a href="#" target="_blank" class="cert-card reveal-up" style="--d:0s">
+          <div class="cert-card is-static reveal-up" style="--d:0s">
             <div class="cert-icon" style="background:rgba(255,153,0,.15);color:#FF9900"><i class="fab fa-aws"></i></div>
             <div class="cert-body">
               <h4>AWS Certified SysOps Administrator – Associate</h4>
-              <span>Amazon Web Services</span>
+              <span>2025 · Amazon Web Services</span>
             </div>
-            <i class="fa fa-external-link-alt cert-link-icon"></i>
-          </a>
-          <a href="https://www.credly.com/badges/4be2c88f-1ff7-4b47-bf96-ae5cffa658d9" target="_blank" class="cert-card reveal-up" style="--d:0.07s">
+          </div>
+          <a href="https://www.credly.com/badges/4be2c88f-1ff7-4b47-bf96-ae5cffa658d9" target="_blank" rel="noopener noreferrer" class="cert-card reveal-up" style="--d:0.07s">
             <div class="cert-icon"><i class="fab fa-google"></i></div>
             <div class="cert-body">
               <h4>Professional Cloud DevOps Engineer</h4>
@@ -578,7 +611,7 @@
             </div>
             <i class="fa fa-external-link-alt cert-link-icon"></i>
           </a>
-          <a href="https://www.credly.com/badges/31523e4b-180c-45a2-9d98-393b6e34bd6c" target="_blank" class="cert-card reveal-up" style="--d:0.14s">
+          <a href="https://www.credly.com/badges/31523e4b-180c-45a2-9d98-393b6e34bd6c" target="_blank" rel="noopener noreferrer" class="cert-card reveal-up" style="--d:0.14s">
             <div class="cert-icon"><i class="fab fa-google"></i></div>
             <div class="cert-body">
               <h4>Professional Cloud Security Engineer</h4>
@@ -586,7 +619,7 @@
             </div>
             <i class="fa fa-external-link-alt cert-link-icon"></i>
           </a>
-          <a href="https://google.accredible.com/e7467af3-c632-4cf6-a1e0-ca8604aaa1f4" target="_blank" class="cert-card reveal-up" style="--d:0.21s">
+          <a href="https://google.accredible.com/e7467af3-c632-4cf6-a1e0-ca8604aaa1f4" target="_blank" rel="noopener noreferrer" class="cert-card reveal-up" style="--d:0.21s">
             <div class="cert-icon"><i class="fab fa-google"></i></div>
             <div class="cert-body">
               <h4>Associate Cloud Engineer</h4>
@@ -594,7 +627,7 @@
             </div>
             <i class="fa fa-external-link-alt cert-link-icon"></i>
           </a>
-          <a href="https://www.credential.net/b02ecc88-a8f2-4ffa-839d-2e20dbd42a91" target="_blank" class="cert-card reveal-up" style="--d:0.28s">
+          <a href="https://www.credential.net/b02ecc88-a8f2-4ffa-839d-2e20dbd42a91" target="_blank" rel="noopener noreferrer" class="cert-card reveal-up" style="--d:0.28s">
             <div class="cert-icon"><i class="fab fa-google"></i></div>
             <div class="cert-body">
               <h4>Cloud Digital Leader</h4>
@@ -602,7 +635,7 @@
             </div>
             <i class="fa fa-external-link-alt cert-link-icon"></i>
           </a>
-          <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=E271A696DB88DF9C3D95928B41E1532BFAD596A31601503E2C09AC01CF2CCC1A" target="_blank" class="cert-card reveal-up" style="--d:0.35s">
+          <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=E271A696DB88DF9C3D95928B41E1532BFAD596A31601503E2C09AC01CF2CCC1A" target="_blank" rel="noopener noreferrer" class="cert-card reveal-up" style="--d:0.35s">
             <div class="cert-icon" style="background:rgba(245,130,32,.15);color:#F58220"><i class="fas fa-cloud"></i></div>
             <div class="cert-body">
               <h4>OCI 2024 Foundations Associate</h4>
@@ -614,7 +647,7 @@
 
         <h3 class="col-title mt-section"><i class="fa fa-user"></i> Professional Summary</h3>
         <div class="summary-card reveal-up">
-          <p>SRE with 4+ years of hands-on production experience at enterprise scale. Strong core in observability (New Relic, Prometheus, Dynatrace), log analysis (Log4j, Apache), incident management and cloud operations (AWS, GCP). Proven track record automating toil and driving measurable reliability gains. Multiple cloud certifications (AWS &amp; GCP). Ready for SRE, DevOps, Cloud Engineering or Product Support Engineer roles.</p>
+          <p>SRE with 4+ years of hands-on production experience at enterprise scale. Strong core in observability (New Relic, Prometheus, Dynatrace), log analysis (Log4j, Apache), incident management and cloud operations (AWS, GCP). Builds serverless alerting and monitoring automation (AWS Lambda, API Gateway, Slack) and uses LLM-assisted RCA to speed up triage. Proven track record automating toil and driving measurable reliability gains. Multiple cloud certifications (AWS &amp; GCP). Ready for SRE, DevOps, Cloud Engineering or Product Support Engineer roles.</p>
         </div>
 
       </div><!-- /resume-col right -->
@@ -628,7 +661,17 @@
     <div class="section-header">
       <span class="section-tag">04 — Projects</span>
       <h2 class="section-title">What I've Built</h2>
-      <p class="section-sub">Production-grade observability automation — real tools I built and ship at work.</p>
+      <p class="section-sub">Alerting and monitoring automation built on serverless functions and scripting, from New Relic webhooks to Gmail-driven Slack alerts.</p>
+    </div>
+
+    <div class="impact-strip reveal-up" style="--d:0s;margin-bottom:2.5rem">
+      <div class="impact-item"><span class="impact-num">60%</span><span class="impact-label">Faster detection (MTTD) from error-rate, throughput and response-time alerting</span></div>
+      <div class="impact-div"></div>
+      <div class="impact-item"><span class="impact-num">1–5 min</span><span class="impact-label">Alert delivery to Slack, replacing manual dashboard checks</span></div>
+      <div class="impact-div"></div>
+      <div class="impact-item"><span class="impact-num">150+</span><span class="impact-label">Services covered across the three New Relic alerting projects</span></div>
+      <div class="impact-div"></div>
+      <div class="impact-item"><span class="impact-num">70–80%</span><span class="impact-label">Less manual release and outage monitoring, no opening each service one by one (estimate)</span></div>
     </div>
 
     <div class="projects-grid">
@@ -637,7 +680,7 @@
         <div class="project-header">
           <div class="project-icon"><i class="fa fa-bell"></i></div>
           <div class="project-links">
-            <a href="https://github.com/niteeshnkp03g/newrelic-error-rate-alerting" target="_blank" title="View on GitHub">
+            <a href="https://github.com/niteeshnkp03g/newrelic-error-rate-alerting" target="_blank" rel="noopener noreferrer" title="View on GitHub">
               <i class="fab fa-github"></i>
             </a>
           </div>
@@ -646,6 +689,10 @@
         <p class="project-desc">
           Production-grade error rate monitoring — NRQL alert conditions trigger AWS Lambda via API Gateway to deliver real-time Open &amp; Resolved Slack notifications with full incident lifecycle visibility and IST timestamps.
         </p>
+        <div class="project-mttd">
+          <p><strong>Before:</strong> Services were checked by hand, so issues could be missed and it was unclear how many services a problem touched.</p>
+          <p><strong>Impact:</strong> Slack alerts arrive within 1–5 minutes and show which services are affected. Also used to watch releases and catch anomalies.</p>
+        </div>
         <div class="project-arch">
           <span class="arch-step">New Relic APM</span>
           <i class="fa fa-arrow-right arch-arrow"></i>
@@ -679,7 +726,7 @@
             <i class="fa fa-tachometer-alt"></i>
           </div>
           <div class="project-links">
-            <a href="https://github.com/niteeshnkp03g/newrelic-response-time-alerting" target="_blank" title="View on GitHub">
+            <a href="https://github.com/niteeshnkp03g/newrelic-response-time-alerting" target="_blank" rel="noopener noreferrer" title="View on GitHub">
               <i class="fab fa-github"></i>
             </a>
           </div>
@@ -688,6 +735,9 @@
         <p class="project-desc">
           APM response-time monitoring with GraphQL alert enrichment — Lambda queries New Relic GraphQL API for threshold details and chart visualisation, adds quiet-hours suppression, then delivers enriched Slack notifications for full lifecycle tracking.
         </p>
+        <div class="project-mttd">
+          <p><strong>Impact:</strong> One response-time alert is an early signal for throughput, database, external-service, application-code and container-crash problems, so triage starts in the right layer.</p>
+        </div>
         <div class="project-arch">
           <span class="arch-step">New Relic APM</span>
           <i class="fa fa-arrow-right arch-arrow"></i>
@@ -715,10 +765,99 @@
         </div>
       </div>
 
+
+      <div class="project-card reveal-up" style="--d:0s">
+        <div class="project-header">
+          <div class="project-icon" style="background:rgba(245,158,11,.15);color:#f59e0b"><i class="fa fa-power-off"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/niteeshnkp03g/newrelic-zero-throughput-alerting" target="_blank" rel="noopener noreferrer" title="View on GitHub" aria-label="New Relic Zero Throughput Alerting on GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3 class="project-title">New Relic Zero Throughput Alerting</h3>
+        <p class="project-desc">
+          Detects services that silently stop receiving traffic. A zero-throughput NRQL condition fires a workflow to Lambda, which posts to Slack and enables or disables P1–P4 alert policies on IST time windows through the New Relic GraphQL API.
+        </p>
+        <div class="project-mttd">
+          <p><strong>Before:</strong> Release and outage monitoring was done by hand.</p>
+          <p><strong>Impact:</strong> Alerts fire when throughput drops to zero on important services and APIs, cutting manual release and outage monitoring time by about 70–80% (estimate).</p>
+        </div>
+        <div class="project-arch">
+          <span class="arch-step">New Relic APM</span>
+          <i class="fa fa-arrow-right arch-arrow"></i>
+          <span class="arch-step">Zero-Throughput NRQL</span>
+          <i class="fa fa-arrow-right arch-arrow"></i>
+          <span class="arch-step">API Gateway</span>
+          <i class="fa fa-arrow-right arch-arrow"></i>
+          <span class="arch-step">AWS Lambda</span>
+          <i class="fa fa-arrow-right arch-arrow"></i>
+          <span class="arch-step">Slack</span>
+        </div>
+        <div class="project-highlights">
+          <div class="ph-item"><i class="fa fa-check-circle"></i> Priority-based policies (P1–P4)</div>
+          <div class="ph-item"><i class="fa fa-check-circle"></i> Scheduled mute / unmute (IST)</div>
+          <div class="ph-item"><i class="fa fa-check-circle"></i> Open &amp; Resolved notifications</div>
+          <div class="ph-item"><i class="fa fa-check-circle"></i> Filters non-alert invocations</div>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">New Relic</span>
+          <span class="tag">NRQL</span>
+          <span class="tag">GraphQL</span>
+          <span class="tag">AWS Lambda</span>
+          <span class="tag">API Gateway</span>
+          <span class="tag">Slack</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal-up" style="--d:0.15s">
+        <div class="project-header">
+          <div class="project-icon" style="background:rgba(6,182,212,.15);color:#06b6d4"><i class="fa fa-envelope-open-text"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/niteeshnkp03g/automated-dag-monitoring-slack-alerting" target="_blank" rel="noopener noreferrer" title="View on GitHub" aria-label="Automated DAG Monitoring &amp; Slack Alerting on GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3 class="project-title">Automated DAG Monitoring &amp; Slack Alerting</h3>
+        <p class="project-desc">
+          Replaces manual inbox checks of scheduled-job summaries. Apps Script reads DAG summary emails every 15 minutes, parses the HTML status table, classifies each run as success, failure or anomaly, and posts a structured Slack alert.
+        </p>
+        <div class="project-mttd">
+          <p><strong>Before:</strong> Someone had to open each summary email and count successful and failed DAGs by hand, which took team effort and allowed human error.</p>
+          <p><strong>Impact:</strong> Success, failure and anomaly alerts post to Slack automatically, removing manual checks and human error and freeing team time.</p>
+        </div>
+        <div class="project-arch">
+          <span class="arch-step">Gmail</span>
+          <i class="fa fa-arrow-right arch-arrow"></i>
+          <span class="arch-step">Apps Script (15 min)</span>
+          <i class="fa fa-arrow-right arch-arrow"></i>
+          <span class="arch-step">HTML Parse</span>
+          <i class="fa fa-arrow-right arch-arrow"></i>
+          <span class="arch-step">Status Check</span>
+          <i class="fa fa-arrow-right arch-arrow"></i>
+          <span class="arch-step">Slack</span>
+        </div>
+        <div class="project-highlights">
+          <div class="ph-item"><i class="fa fa-check-circle"></i> Success, failure &amp; anomaly alerts</div>
+          <div class="ph-item"><i class="fa fa-check-circle"></i> No duplicate alerts (message IDs)</div>
+          <div class="ph-item"><i class="fa fa-check-circle"></i> Script lock &amp; retry with backoff</div>
+          <div class="ph-item"><i class="fa fa-check-circle"></i> Zero infrastructure to run</div>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Google Apps Script</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Gmail API</span>
+          <span class="tag">Slack Webhooks</span>
+          <span class="tag">Time-driven Triggers</span>
+        </div>
+      </div>
+
     </div>
 
     <div class="github-cta reveal-up" style="--d:0.3s">
-      <a href="https://github.com/niteeshnkp03g" target="_blank" class="btn-ghost btn-github">
+      <a href="https://github.com/niteeshnkp03g" target="_blank" rel="noopener noreferrer" class="btn-ghost btn-github">
         <i class="fab fa-github"></i> View All on GitHub
       </a>
     </div>
@@ -753,34 +892,36 @@
           </div>
         </div>
         <div class="contact-socials">
-          <a href="https://www.linkedin.com/in/niteeshkpatel" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/niteeshnkp03g" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.instagram.com/niteesh.kumarpatel/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/niteeshkpatel" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/niteeshnkp03g" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/niteesh.kumarpatel/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
 
-      <div class="contact-form-wrap reveal-right">
+      <form class="contact-form-wrap reveal-right" id="contactForm" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <div class="form-group">
-          <input type="text" id="cName" placeholder=" " autocomplete="off">
+          <input type="text" id="cName" name="name" placeholder=" " autocomplete="off">
           <label for="cName">Your Name</label>
         </div>
         <div class="form-group">
-          <input type="email" id="cEmail" placeholder=" " autocomplete="off">
+          <input type="email" id="cEmail" name="email" placeholder=" " autocomplete="off">
           <label for="cEmail">Your Email</label>
         </div>
         <div class="form-group">
-          <input type="text" id="cSubject" placeholder=" " autocomplete="off">
+          <input type="text" id="cSubject" name="subject" placeholder=" " autocomplete="off">
           <label for="cSubject">Subject</label>
         </div>
         <div class="form-group">
-          <textarea id="cMessage" rows="5" placeholder=" "></textarea>
+          <textarea id="cMessage" name="message" rows="5" placeholder=" "></textarea>
           <label for="cMessage">Message</label>
         </div>
-        <button class="btn-primary btn-submit" id="submitBtn">
+        <button type="submit" class="btn-primary btn-submit" id="submitBtn">
           <span>Send Message</span><i class="fa fa-paper-plane"></i>
         </button>
-        <div id="formStatus" class="form-status"></div>
-      </div>
+        <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+      </form>
     </div>
   </div>
 </section>

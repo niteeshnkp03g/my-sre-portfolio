@@ -33,6 +33,8 @@ location:   Noida, Uttar Pradesh, IN
 experience: 4+ years
 focus:
   - Observability & Monitoring
+  - Serverless Alerting Automation
+  - AI-Assisted RCA (LLM)
   - Incident Management & RCA
   - Cloud Infrastructure (AWS · GCP · Azure)
   - CI/CD & Automation
@@ -49,7 +51,7 @@ open_to:    [ SRE, DevOps Engineer, Cloud Engineer, Product Support Engineer ]
 │  🔭  Observability   →  New Relic · Prometheus · Grafana        │
 │  🛡️  Reliability     →  99.9% uptime · 30K+ servers             │
 │  ⚡  Automation      →  Python/Bash · 40% manual effort saved   │
-│  📉  Incident Mgmt   →  60% MTTR reduction at Kissht            │
+│  📉  Incident Mgmt   →  60% faster MTTD → quicker fixes         │
 │  ☁️  Cloud           →  AWS · GCP · Azure · Private Cloud       │
 │  🔁  CI/CD           →  Harness · Jenkins · GitHub Actions      │
 └─────────────────────────────────────────────────────────────────┘
@@ -80,6 +82,9 @@ open_to:    [ SRE, DevOps Engineer, Cloud Engineer, Product Support Engineer ]
 ![Harness](https://img.shields.io/badge/Harness-00ADE4?style=flat-square&logo=harness&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
+![AWS Lambda](https://img.shields.io/badge/AWS%20Lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white)
+![Slack](https://img.shields.io/badge/Slack-4A154B?style=flat-square&logo=slack&logoColor=white)
+![Apps Script](https://img.shields.io/badge/Apps%20Script-4285F4?style=flat-square&logo=google&logoColor=white)
 
 #### 🗄️ Databases
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
@@ -97,17 +102,39 @@ open_to:    [ SRE, DevOps Engineer, Cloud Engineer, Product Support Engineer ]
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=niteeshnkp03g&repo=newrelic-response-time-alerting&theme=tokyonight&border_color=6366f1&title_color=a5b4fc&icon_color=6366f1" />
 </a>
 
+<br/>
+<a href="https://github.com/niteeshnkp03g/newrelic-zero-throughput-alerting">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=niteeshnkp03g&repo=newrelic-zero-throughput-alerting&theme=tokyonight&border_color=6366f1&title_color=a5b4fc&icon_color=6366f1" />
+</a>
+<a href="https://github.com/niteeshnkp03g/automated-dag-monitoring-slack-alerting">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=niteeshnkp03g&repo=automated-dag-monitoring-slack-alerting&theme=tokyonight&border_color=6366f1&title_color=a5b4fc&icon_color=6366f1" />
+</a>
+
 <br/><br/>
 
 ### 🔔 New Relic Error Rate Alerting
 > NRQL alert → API Gateway → **AWS Lambda** → Slack  
 > Real-time Open & Resolved incident notifications with IST timestamps.  
+> **Impact:** alerts in 1–5 minutes replace manual checks and show which services are affected.  
 > `Python` `New Relic` `AWS Lambda` `API Gateway` `NRQL` `Slack`
 
 ### ⚡ New Relic Response Time Alerting
 > NRQL monitor → API Gateway → **AWS Lambda** → enriched via GraphQL → Slack  
 > Chart visualisation, quiet-hours logic, full lifecycle tracking.  
+> **Impact:** one response-time signal points to throughput, database, external-service, app-code or container issues.  
 > `Python` `New Relic` `GraphQL` `AWS Lambda` `API Gateway` `Slack`
+
+### 🚫 New Relic Zero Throughput Alerting
+> Zero-throughput NRQL → API Gateway → **AWS Lambda** → Slack  
+> Priority-based (P1–P4) alert-policy mute/unmute on IST time windows via the New Relic GraphQL API.  
+> **Impact:** zero-throughput alerts on key services and APIs cut manual release and outage monitoring by ~70–80% (estimate).  
+> `Python` `New Relic` `NRQL` `GraphQL` `AWS Lambda` `API Gateway` `Slack`
+
+### 📬 Automated DAG Monitoring & Slack Alerting
+> Gmail → **Google Apps Script** (every 15 min) → HTML parsing → Slack  
+> Classifies DAG runs as success, failure or anomaly; duplicate-safe with locking and retry/backoff.  
+> **Impact:** replaces manual DAG success/failure counting, saving team effort and removing human error.  
+> `Google Apps Script` `JavaScript` `Gmail` `Slack Webhooks`
 
 ---
 
@@ -144,9 +171,10 @@ open_to:    [ SRE, DevOps Engineer, Cloud Engineer, Product Support Engineer ]
 
 ```
 🏢  Kissht                   │  Site Reliability Engineer   │  Sep 2025 – Present
-    ├─ 60% MTTR reduction via Prometheus + Grafana + New Relic
-    ├─ 90% troubleshooting effort saved via Python log automation
-    └─ 100+ feature releases monitored (pre + post deployment)
+    ├─ 60% faster detection (MTTD) → quicker resolution via Prometheus + Grafana + New Relic
+    ├─ 70% troubleshooting effort saved via Python log automation
+    ├─ Claude (LLM) integrated with New Relic, Grafana & Sentry for faster RCA
+    └─ 200+ releases, migrations & fixes coordinated (pre + post deployment)
 
 🏢  HCL Technologies          │  Cloud Engineer              │  Dec 2021 – Sep 2025
     │  Client: State Street Corporation

@@ -1,5 +1,8 @@
 "use strict";
 
+const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
 /* ═══════════════════════════════
    CUSTOM CURSOR
 ═══════════════════════════════ */
@@ -12,7 +15,7 @@ document.addEventListener("mousemove", e => {
   cursorDot.style.left = mx + "px";
   cursorDot.style.top  = my + "px";
 });
-(function animateCursor() {
+if (finePointer && !reduceMotion) (function animateCursor() {
   cx += (mx - cx) * 0.12;
   cy += (my - cy) * 0.12;
   cursor.style.left = cx + "px";
@@ -48,9 +51,14 @@ window.addEventListener("scroll", () => {
 ═══════════════════════════════ */
 const navToggle  = document.getElementById("navToggle");
 const mobileMenu = document.getElementById("mobileMenu");
-navToggle.addEventListener("click", () => mobileMenu.classList.toggle("open"));
+const setMenu = open => {
+  mobileMenu.classList.toggle("open", open);
+  navToggle.setAttribute("aria-expanded", String(open));
+};
+navToggle.addEventListener("click", () => setMenu(!mobileMenu.classList.contains("open")));
+document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
 document.querySelectorAll(".mob-link").forEach(l =>
-  l.addEventListener("click", () => mobileMenu.classList.remove("open"))
+  l.addEventListener("click", () => setMenu(false))
 );
 
 
@@ -126,7 +134,7 @@ syncActive();
       if (p.y < 0 || p.y > H) p.vy *= -1;
       const dx = p.x - mouseX, dy = p.y - mouseY;
       const d  = Math.sqrt(dx*dx + dy*dy);
-      if (d < 90) {
+      if (d > 0 && d < 90) {
         p.vx += dx / d * .055; p.vy += dy / d * .055;
         const sp = Math.sqrt(p.vx**2 + p.vy**2);
         if (sp > 1.4) { p.vx /= sp; p.vy /= sp; }
@@ -151,9 +159,21 @@ syncActive();
       ctx.fillStyle = "rgba(165,180,252,.5)";
       ctx.fill();
     }
-    requestAnimationFrame(tick);
+    if (running) rafId = requestAnimationFrame(tick);
   };
-  tick();
+
+  // Run only while the hero is visible and the tab is active.
+  let running = false, rafId = 0, inView = true;
+  const setRunning = on => {
+    if (on && !running) { running = true; rafId = requestAnimationFrame(tick); }
+    else if (!on) { running = false; cancelAnimationFrame(rafId); }
+  };
+  if (reduceMotion) {
+    tick();                       // one static frame, no loop
+  } else {
+    new IntersectionObserver(([e]) => { inView = e.isIntersecting; setRunning(inView && !document.hidden); }).observe(canvas);
+    document.addEventListener("visibilitychange", () => setRunning(inView && !document.hidden));
+  }
 })();
 
 
@@ -169,6 +189,7 @@ syncActive();
     "Product Support Engineer",
     "DevOps Practitioner",
   ];
+  if (reduceMotion) { el.textContent = roles[0]; return; }
   let ri = 0, ci = 0, deleting = false;
   const type = () => {
     const word = roles[ri];
@@ -274,31 +295,51 @@ document.querySelectorAll(".project-card").forEach(card => {
 
 
 /* ═══════════════════════════════
-   CONTACT FORM
+   CONTACT FORM  (Netlify Forms, mailto fallback)
 ═══════════════════════════════ */
-document.getElementById("submitBtn").addEventListener("click", () => {
-  const name    = document.getElementById("cName").value.trim();
-  const email   = document.getElementById("cEmail").value.trim();
-  const subject = document.getElementById("cSubject").value.trim();
-  const message = document.getElementById("cMessage").value.trim();
+document.getElementById("contactForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  const form    = e.currentTarget;
+  const name    = form.cName.value.trim();
+  const email   = form.cEmail.value.trim();
+  const subject = form.cSubject.value.trim();
+  const message = form.cMessage.value.trim();
   const status  = document.getElementById("formStatus");
+  const btn     = document.getElementById("submitBtn");
 
+  const show = (type, text) => { status.className = "form-status " + type; status.textContent = text; };
   status.className = "form-status";
 
-  if (!name || !email || !subject || !message) {
-    status.className = "form-status error";
-    status.textContent = "Please fill in all fields.";
-    return;
-  }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    status.className = "form-status error";
-    status.textContent = "Please enter a valid email address.";
-    return;
-  }
+  if (!name || !email || !subject || !message) return show("error", "Please fill in all fields.");
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return show("error", "Please enter a valid email address.");
 
-  const mailto = `mailto:niteeshnkp03@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
-  window.location.href = mailto;
+  btn.disabled = true;
+  try {
+    const res = await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form)).toString(),
+    });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    form.reset();
+    show("success", "Message sent. I'll get back to you soon.");
+  } catch (err) {
+    // Not on Netlify (or the request failed): fall back to the visitor's mail app.
+    const body = `From: ${name} (${email})\n\n${message}`;
+    window.location.href = `mailto:niteeshnkp03@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    show("success", "Opening your mail app…");
+  } finally {
+    btn.disabled = false;
+  }
+});
 
-  status.className = "form-status success";
-  status.textContent = "Opening your mail client…";
+
+/* ═══════════════════════════════
+   "ASK ME ABOUT" CHIPS → prefill contact subject
+═══════════════════════════════ */
+document.querySelectorAll(".ask-chip").forEach(chip => {
+  chip.addEventListener("click", () => {
+    const subject = document.getElementById("cSubject");
+    if (subject) subject.value = "Question: " + chip.dataset.topic;
+  });
 });
