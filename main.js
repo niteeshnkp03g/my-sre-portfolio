@@ -185,6 +185,7 @@ syncActive();
   const roles = [
     "Site Reliability Engineer",
     "Cloud Engineer",
+    "Cloud Support Engineer",
     "Observability Specialist",
     "Product Support Engineer",
     "DevOps Practitioner",
@@ -209,13 +210,14 @@ const counterObs = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
     const el  = entry.target;
-    const end = parseInt(el.dataset.target);
+    const end = parseFloat(el.dataset.target);
+    const dec = (el.dataset.target.split(".")[1] || "").length;
     const sfx = el.dataset.suffix || "+";
     const dur = 1600;
     const start = performance.now();
     const tick = now => {
       const pct = Math.min((now - start) / dur, 1);
-      el.textContent = Math.floor(pct * end) + (pct === 1 ? sfx : "");
+      el.textContent = (pct === 1 ? end : Math.floor(pct * end * 10 ** dec) / 10 ** dec).toFixed(dec) + (pct === 1 ? sfx : "");
       if (pct < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
@@ -331,15 +333,4 @@ document.getElementById("contactForm").addEventListener("submit", async e => {
   } finally {
     btn.disabled = false;
   }
-});
-
-
-/* ═══════════════════════════════
-   "ASK ME ABOUT" CHIPS → prefill contact subject
-═══════════════════════════════ */
-document.querySelectorAll(".ask-chip").forEach(chip => {
-  chip.addEventListener("click", () => {
-    const subject = document.getElementById("cSubject");
-    if (subject) subject.value = "Question: " + chip.dataset.topic;
-  });
 });

@@ -30,7 +30,7 @@ name:       Niteesh Kumar Patel
 role:       Site Reliability Engineer
 company:    Kissht  (prev. HCL Technologies → State Street Corp)
 location:   Noida, Uttar Pradesh, IN
-experience: 4+ years
+experience: 4.10+ years
 focus:
   - Observability & Monitoring
   - Serverless Alerting Automation
@@ -39,7 +39,7 @@ focus:
   - Cloud Infrastructure (AWS · GCP · Azure)
   - CI/CD & Automation
   - Distributed Tracing & Synthetic Monitoring
-open_to:    [ SRE, DevOps Engineer, Cloud Engineer, Product Support Engineer ]
+open_to:    [ SRE, DevOps Engineer, Cloud Engineer, Cloud Support Engineer, Product Support Engineer ]
 ```
 
 ---
@@ -193,7 +193,7 @@ open_to:    [ SRE, DevOps Engineer, Cloud Engineer, Product Support Engineer ]
 
 <div align="center">
 
-I'm open to **SRE · DevOps · Cloud Engineer · Product Support Engineer** roles.
+I'm open to **SRE · DevOps · Cloud Engineer · Cloud Support Engineer · Product Support Engineer** roles.
 
 [![Portfolio](https://img.shields.io/badge/🌐_Portfolio-6366f1?style=for-the-badge)](https://niteeshkumarpatel.netlify.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/niteeshkpatel)
