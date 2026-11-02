@@ -30,7 +30,7 @@ name:       Niteesh Kumar Patel
 role:       Site Reliability Engineer
 company:    Kissht  (prev. HCL Technologies → State Street Corp)
 location:   Noida, Uttar Pradesh, IN
-experience: 4.10+ years
+experience: 4+ years
 focus:
   - Observability & Monitoring
   - Serverless Alerting Automation
