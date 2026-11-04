@@ -110,6 +110,11 @@ open_to:    [ SRE, DevOps Engineer, Cloud Engineer, Cloud Support Engineer, Prod
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=niteeshnkp03g&repo=automated-dag-monitoring-slack-alerting&theme=tokyonight&border_color=6366f1&title_color=a5b4fc&icon_color=6366f1" />
 </a>
 
+<br/>
+<a href="https://github.com/niteeshnkp03g/newrelic-services-api-level-error-spike-alerts">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=niteeshnkp03g&repo=newrelic-services-api-level-error-spike-alerts&theme=tokyonight&border_color=6366f1&title_color=a5b4fc&icon_color=6366f1" />
+</a>
+
 <br/><br/>
 
 ### 🔔 New Relic Error Rate Alerting
@@ -129,6 +134,12 @@ open_to:    [ SRE, DevOps Engineer, Cloud Engineer, Cloud Support Engineer, Prod
 > Priority-based (P1–P4) alert-policy mute/unmute on IST time windows via the New Relic GraphQL API.  
 > **Impact:** zero-throughput alerts on key services and APIs cut manual release and outage monitoring by ~70–80% (estimate).  
 > `Python` `New Relic` `NRQL` `GraphQL` `AWS Lambda` `API Gateway` `Slack`
+
+### 📈 API-Level Error Spike Alerts
+> EventBridge (5 min) → **AWS Lambda** → New Relic NerdGraph → Slack  
+> Compares the last 60 minutes with the same hour yesterday and last week; alerts when the error rate is 2x both, with a RESOLVED card when it ends.  
+> **Impact:** spikes on a single API are flagged against the same hour on earlier days, so normal daily patterns don't raise false alarms.  
+> `Python` `New Relic` `NerdGraph` `AWS Lambda` `EventBridge` `Slack`
 
 ### 📬 Automated DAG Monitoring & Slack Alerting
 > Gmail → **Google Apps Script** (every 15 min) → HTML parsing → Slack  

@@ -705,7 +705,7 @@
       <div class="impact-div"></div>
       <div class="impact-item"><span class="impact-num">1–5 min</span><span class="impact-label">Alert delivery to Slack, replacing manual dashboard checks</span></div>
       <div class="impact-div"></div>
-      <div class="impact-item"><span class="impact-num">150+</span><span class="impact-label">Services covered across the three New Relic alerting projects</span></div>
+      <div class="impact-item"><span class="impact-num">150+</span><span class="impact-label">Services covered across the New Relic alerting projects</span></div>
       <div class="impact-div"></div>
       <div class="impact-item"><span class="impact-num">70–80%</span><span class="impact-label">Less manual release and outage monitoring, no opening each service one by one (estimate)</span></div>
     </div>
@@ -894,6 +894,51 @@
         </div>
       </div>
 
+
+      <div class="project-card reveal-up" style="--d:0s">
+        <div class="project-header">
+          <div class="project-icon" style="background:rgba(244,63,94,.15);color:#f43f5e"><i class="fa fa-chart-line"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/niteeshnkp03g/newrelic-services-api-level-error-spike-alerts" target="_blank" rel="noopener noreferrer" title="View on GitHub" aria-label="API Error-Rate Spike Alerts on GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3 class="project-title">API-Level Error Spike Alerts</h3>
+        <p class="project-desc">
+          Catches error-rate spikes on individual APIs. Every 5 minutes a Lambda compares the last 60 minutes with the same hour yesterday and last week, and posts a Slack card when the rate is at least 2x both. A RESOLVED card follows when the spike ends.
+        </p>
+        <img class="project-visual" src="images/api-error-spike-thinking.svg" alt="API error spike alerting explained as comparing the same hour on different days: today's error rate against yesterday and last week, with a bell when it is 2x higher" loading="lazy" width="640" height="222">
+        <div class="project-mttd">
+          <p><strong>Before:</strong> Each API's error graph had to be checked by hand.</p>
+          <p><strong>Impact:</strong> Spikes on a single API are flagged by comparing against the same hour on earlier days, so normal daily patterns don't raise false alarms.</p>
+        </div>
+        <div class="project-arch">
+          <span class="arch-step">EventBridge (5 min)</span>
+          <i class="fa fa-arrow-right arch-arrow"></i>
+          <span class="arch-step">NerdGraph query</span>
+          <i class="fa fa-arrow-right arch-arrow"></i>
+          <span class="arch-step">Compare 60-min window</span>
+          <i class="fa fa-arrow-right arch-arrow"></i>
+          <span class="arch-step">AWS Lambda</span>
+          <i class="fa fa-arrow-right arch-arrow"></i>
+          <span class="arch-step">Slack</span>
+        </div>
+        <div class="project-highlights">
+          <div class="ph-item"><i class="fa fa-check-circle"></i> Today vs yesterday AND last week</div>
+          <div class="ph-item"><i class="fa fa-check-circle"></i> CRITICAL and RESOLVED Slack cards</div>
+          <div class="ph-item"><i class="fa fa-check-circle"></i> Per API: service + transaction</div>
+          <div class="ph-item"><i class="fa fa-check-circle"></i> Min-error guard, no duplicate alerts</div>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">New Relic</span>
+          <span class="tag">NerdGraph</span>
+          <span class="tag">AWS Lambda</span>
+          <span class="tag">EventBridge</span>
+          <span class="tag">Slack</span>
+        </div>
+      </div>
     </div>
 
     <div class="github-cta reveal-up" style="--d:0.3s">

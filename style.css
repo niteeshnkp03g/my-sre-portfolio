@@ -909,3 +909,5 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .thinking{margin-top:3.5rem}
 .thinking-img{display:block;width:100%;height:auto;border-radius:14px;margin-top:1rem}
 .think-sub{font-size:.88rem;color:var(--muted);margin-top:.4rem}
+.projects-grid>.project-card:last-child:nth-child(odd){grid-column:1/-1}
+@media(min-width:1025px){.projects-grid>.project-card:last-child:nth-child(odd){justify-self:center;width:calc(50% - 1rem)}}
