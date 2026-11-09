@@ -213,5 +213,3 @@ I'm open to **SRE · DevOps · Cloud Engineer · Cloud Support Engineer · Produ
 </div>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=6366f1&height=100&section=footer&animation=fadeIn" width="100%"/>
-
-Automated deployment tested with Jenkins CI/CD.
