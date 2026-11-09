@@ -25,7 +25,7 @@ pipeline {
                     mkdir -p build
 
                     cp index.html style.css main.js build/
-                    cp me.png Resume.pdf build/
+                    cp Resume.pdf build/
                     cp -r images build/
                 '''
             }
