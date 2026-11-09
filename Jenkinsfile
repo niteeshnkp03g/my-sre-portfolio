@@ -38,7 +38,7 @@ pipeline {
                 sh '''
                     find /var/www/html -mindepth 1 -maxdepth 1 -exec rm -rf {} +
 
-                    cp -a build/. /var/www/html/
+                    cp -r build/. /var/www/html/
                 '''
             }
         }
