@@ -123,25 +123,25 @@ open_to:    [ SRE, DevOps Engineer, Cloud Engineer, Cloud Support Engineer, Prod
 > **Impact:** alerts in 1–5 minutes replace manual checks and show which services are affected.  
 > `Python` `New Relic` `AWS Lambda` `API Gateway` `NRQL` `Slack`
 
-### ⚡ New Relic Response Time Alerting
+### ⚡ New Relic Response-Time Alerting
 > NRQL monitor → API Gateway → **AWS Lambda** → enriched via GraphQL → Slack  
 > Chart visualisation, quiet-hours logic, full lifecycle tracking.  
 > **Impact:** one response-time signal points to throughput, database, external-service, app-code or container issues.  
 > `Python` `New Relic` `GraphQL` `AWS Lambda` `API Gateway` `Slack`
 
-### 🚫 New Relic Zero Throughput Alerting
+### 🚫 Zero-Throughput Alerting
 > Zero-throughput NRQL → API Gateway → **AWS Lambda** → Slack  
 > Priority-based (P1–P4) alert-policy mute/unmute on IST time windows via the New Relic GraphQL API.  
 > **Impact:** zero-throughput alerts on key services and APIs cut manual release and outage monitoring by ~70–80% (estimate).  
 > `Python` `New Relic` `NRQL` `GraphQL` `AWS Lambda` `API Gateway` `Slack`
 
-### 📈 API-Level Error Spike Alerts
+### 📈 API-Level Error-Spike Detection
 > EventBridge (5 min) → **AWS Lambda** → New Relic NerdGraph → Slack  
 > Compares the last 60 minutes with the same hour yesterday and last week; alerts when the error rate is 2x both, with a RESOLVED card when it ends.  
 > **Impact:** spikes on a single API are flagged against the same hour on earlier days, so normal daily patterns don't raise false alarms.  
 > `Python` `New Relic` `NerdGraph` `AWS Lambda` `EventBridge` `Slack`
 
-### 📬 Automated DAG Monitoring & Slack Alerting
+### 📬 Automated DAG Health Notifications
 > Gmail → **Google Apps Script** (every 15 min) → HTML parsing → Slack  
 > Classifies DAG runs as success, failure or anomaly; duplicate-safe with locking and retry/backoff.  
 > **Impact:** replaces manual DAG success/failure counting, saving team effort and removing human error.  
@@ -192,7 +192,7 @@ open_to:    [ SRE, DevOps Engineer, Cloud Engineer, Cloud Support Engineer, Prod
     ├─ L2/L3 support for 30,000+ servers at 99.9% uptime
     ├─ Diagnosed issues via Log4j, Apache logs & distributed tracing
     ├─ Reduced repeated incidents by 30% via CI/CD automation
-    ├─ Migrated enterprise apps from on-prem → AWS (zero downtime)
+    ├─ Supported on-prem → AWS migration of enterprise apps (zero downtime)
     ├─ Developed Python/Bash scripts → 40% manual workload reduction
     ├─ Docker & Kubernetes → 25% faster deployment cycles
     └─ 🏅 Performer of the Month — Jan 2025

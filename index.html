@@ -171,6 +171,9 @@
           <div class="comp-item"><i class="fa fa-check"></i> Containerisation (Docker/K8s)</div>
           <div class="comp-item"><i class="fa fa-check"></i> Cloud Security &amp; IAM</div>
           <div class="comp-item"><i class="fa fa-check"></i> Cloud Support &amp; Troubleshooting</div>
+          <div class="comp-item"><i class="fa fa-check"></i> Major Incident &amp; Problem Management</div>
+          <div class="comp-item"><i class="fa fa-check"></i> Release &amp; Change Validation</div>
+          <div class="comp-item"><i class="fa fa-check"></i> Alert Design (NRQL)</div>
           <div class="comp-item"><i class="fa fa-check"></i> Serverless Alerting (Lambda · API Gateway)</div>
           <div class="comp-item"><i class="fa fa-check"></i> AI-Assisted RCA (LLM)</div>
         </div>
@@ -249,7 +252,7 @@
         </li>
         <li class="j-step">
           <span class="j-date">Dec 2021</span>
-          <p>Became a Cloud Engineer on State Street's 30,000+ servers: L2/L3 incidents and a zero-downtime AWS migration.</p>
+          <p>Became a Cloud Engineer on State Street's 30,000+ servers: L2/L3 operations, plus support for a zero-downtime AWS migration.</p>
         </li>
         <li class="j-step j-now">
           <span class="j-date">Sep 2025 – now</span>
@@ -390,7 +393,7 @@
 
       <div class="skill-bar reveal-up" style="--d:0.28s" data-cat="cloud">
         <div class="skill-meta">
-          <span class="skill-name">AWS (EC2, Lambda, API GW, S3, IAM)</span>
+          <span class="skill-name">AWS (EC2, ECS, Lambda, API Gateway, EventBridge, S3, IAM, ALB)</span>
           <span class="skill-pct">Proficient</span>
         </div>
         <div class="skill-track"><div class="skill-fill" data-w="78"></div></div>
@@ -521,17 +524,18 @@
             </div>
             <ul class="tl-list">
               <li>Built unified Prometheus, Grafana and New Relic alerting for proactive, threshold-based detection — cut <strong>MTTD by 60%</strong>, so incidents were picked up sooner and resolved faster (lower MTTR).</li>
+              <li>Designed New Relic alert workflows for error rate, response time, zero throughput and API-level error spikes using <strong>AWS Lambda, API Gateway and EventBridge</strong>, with Slack notifications within 1–5 minutes across <strong>150+ services</strong>.</li>
               <li>Automated Python-based log analysis &amp; Sentry ingestion — troubleshooting effort cut by <strong>70%</strong>, alert noise reduced.</li>
               <li>Implemented <strong>distributed tracing</strong> and <strong>synthetic monitoring</strong> for proactive failure detection.</li>
-              <li>Coordinated <strong>200+ feature releases</strong>, migrations and bug-fix deployments end-to-end, validating stability before and after each deploy.</li>
+              <li>Coordinated <strong>200+ feature releases</strong>, migrations and bug-fix deployments end-to-end, validating stability before and after each change and keeping engineering and support teams informed.</li>
               <li>Monitored end-to-end user journeys via Metabase, Percept and Clarity session recordings.</li>
               <li>Integrated <strong>Claude (LLM)</strong> with New Relic, Grafana and Sentry to speed up root cause analysis during incident triage.</li>
-              <li>Led structured RCA and implemented preventive remediation playbooks, improving platform reliability.</li>
+              <li>Led structured RCA, documented findings and implemented preventive remediation playbooks aligned with SLA/SLO targets.</li>
               <li>Executed instance refresh operations and post-change validation ensuring SLA compliance.</li>
             </ul>
             <div class="tl-tools">
               <span>Prometheus</span><span>Grafana</span><span>New Relic</span><span>Sentry</span>
-              <span>Python</span><span>Distributed Tracing</span><span>Synthetic Monitoring</span><span>Claude (LLM) RCA</span>
+              <span>Python</span><span>Distributed Tracing</span><span>Synthetic Monitoring</span><span>Claude (LLM) RCA</span><span>AWS Lambda</span><span>EventBridge</span>
             </div>
           </div>
         </div>
@@ -546,11 +550,12 @@
             </div>
             <ul class="tl-list">
               <li>L2/L3 support for <strong>30,000+ servers</strong> — 250+ incidents/month at 99.9% uptime, all within SLA.</li>
+              <li>Maintained <strong>Java/WebSphere</strong> applications across production, UAT and development, partnering with developers to shorten release-resolution time by <strong>15%</strong>.</li>
               <li>Diagnosed production issues using <strong>Log4j application logs</strong>, <strong>Apache HTTP server logs</strong>, Dynatrace distributed traces and synthetic monitoring checks.</li>
               <li>Resolved CI/CD pipeline failures (Harness), cutting repeated pipeline incidents by <strong>30%</strong>.</li>
-              <li>Executed zero-downtime migration of enterprise applications from on-prem to <strong>AWS</strong>.</li>
+              <li>Supported zero-downtime migration of enterprise applications from on-prem to <strong>AWS</strong> through phased cutover planning and validation.</li>
               <li>Wrote Python/Bash automation — patch management, health checks, reporting — saving <strong>40% manual effort</strong>.</li>
-              <li>Orchestrated Docker &amp; Kubernetes deployments, accelerating release cycles by <strong>25%</strong>.</li>
+              <li>Supported Docker &amp; Kubernetes deployments, accelerating release cycles by <strong>25%</strong>.</li>
               <li>Performed heap &amp; thread dump analysis for JVM tuning; administered MySQL and MSSQL databases.</li>
               <li>Hardened security: IAM, patch management, vulnerability remediation at OS/app level.</li>
               <li>🏆 <strong>Performer of the Month</strong> — January 2025.</li>
@@ -573,7 +578,7 @@
             <ul class="tl-list">
               <li>Monitored infrastructure using Dynatrace, Prometheus &amp; Grafana, reducing manual triaging.</li>
               <li>Implemented alert suppression rules and proactive security monitoring.</li>
-              <li>Configured web server mod cluster for load distribution and high availability.</li>
+              <li>Performed server health checks and operations such as reboots and deployment monitoring.</li>
             </ul>
           </div>
         </div>
@@ -683,7 +688,7 @@
 
         <h3 class="col-title mt-section"><i class="fa fa-user"></i> Professional Summary</h3>
         <div class="summary-card reveal-up">
-          <p>SRE with 4+ years of hands-on production experience at enterprise scale. Strong core in observability (New Relic, Prometheus, Dynatrace), log analysis (Log4j, Apache), incident management and cloud operations (AWS, GCP). Builds serverless alerting and monitoring automation (AWS Lambda, API Gateway, Slack) and uses LLM-assisted RCA to speed up triage. Proven track record automating toil and driving measurable reliability gains. Multiple cloud certifications (AWS &amp; GCP). Ready for SRE, DevOps, Cloud Engineering or Product Support Engineer roles.</p>
+          <p>Site Reliability Engineer with 4+ years of experience across production reliability, cloud operations and application performance for enterprise clients, supporting 30,000+ servers at 99.9% uptime. Experienced in Linux, AWS, Kubernetes, Python, Bash and observability platforms including New Relic, Prometheus, Grafana, Dynatrace and Splunk. Background includes enterprise-scale operations, proactive alert design, incident response, automation and service performance analysis. Cut detection time (MTTD) by 60% with proactive alerting and built serverless Slack alerting (AWS Lambda, API Gateway, EventBridge) across 150+ services. Multiple cloud certifications (AWS &amp; GCP). Open to SRE, Cloud Support, DevOps and Product Support Engineer roles.</p>
         </div>
 
       </div><!-- /resume-col right -->
@@ -768,7 +773,7 @@
             </a>
           </div>
         </div>
-        <h3 class="project-title">New Relic Response Time Alerting</h3>
+        <h3 class="project-title">New Relic Response-Time Alerting</h3>
         <p class="project-desc">
           APM response-time monitoring with GraphQL alert enrichment — Lambda queries New Relic GraphQL API for threshold details and chart visualisation, adds quiet-hours suppression, then delivers enriched Slack notifications for full lifecycle tracking.
         </p>
@@ -808,12 +813,12 @@
         <div class="project-header">
           <div class="project-icon" style="background:rgba(245,158,11,.15);color:#f59e0b"><i class="fa fa-power-off"></i></div>
           <div class="project-links">
-            <a href="https://github.com/niteeshnkp03g/newrelic-zero-throughput-alerting" target="_blank" rel="noopener noreferrer" title="View on GitHub" aria-label="New Relic Zero Throughput Alerting on GitHub">
+            <a href="https://github.com/niteeshnkp03g/newrelic-zero-throughput-alerting" target="_blank" rel="noopener noreferrer" title="View on GitHub" aria-label="Zero-Throughput Alerting on GitHub">
               <i class="fab fa-github"></i>
             </a>
           </div>
         </div>
-        <h3 class="project-title">New Relic Zero Throughput Alerting</h3>
+        <h3 class="project-title">Zero-Throughput Alerting</h3>
         <p class="project-desc">
           Detects services that silently stop receiving traffic. A zero-throughput NRQL condition fires a workflow to Lambda, which posts to Slack and enables or disables P1–P4 alert policies on IST time windows through the New Relic GraphQL API.
         </p>
@@ -854,12 +859,12 @@
         <div class="project-header">
           <div class="project-icon" style="background:rgba(6,182,212,.15);color:#06b6d4"><i class="fa fa-envelope-open-text"></i></div>
           <div class="project-links">
-            <a href="https://github.com/niteeshnkp03g/automated-dag-monitoring-slack-alerting" target="_blank" rel="noopener noreferrer" title="View on GitHub" aria-label="Automated DAG Monitoring &amp; Slack Alerting on GitHub">
+            <a href="https://github.com/niteeshnkp03g/automated-dag-monitoring-slack-alerting" target="_blank" rel="noopener noreferrer" title="View on GitHub" aria-label="Automated DAG Health Notifications on GitHub">
               <i class="fab fa-github"></i>
             </a>
           </div>
         </div>
-        <h3 class="project-title">Automated DAG Monitoring &amp; Slack Alerting</h3>
+        <h3 class="project-title">Automated DAG Health Notifications</h3>
         <p class="project-desc">
           Replaces manual inbox checks of scheduled-job summaries. Apps Script reads DAG summary emails every 15 minutes, parses the HTML status table, classifies each run as success, failure or anomaly, and posts a structured Slack alert.
         </p>
@@ -904,7 +909,7 @@
             </a>
           </div>
         </div>
-        <h3 class="project-title">API-Level Error Spike Alerts</h3>
+        <h3 class="project-title">API-Level Error-Spike Detection</h3>
         <p class="project-desc">
           Catches error-rate spikes on individual APIs. Every 5 minutes a Lambda compares the last 60 minutes with the same hour yesterday and last week, and posts a Slack card when the rate is at least 2x both. A RESOLVED card follows when the spike ends.
         </p>
@@ -965,7 +970,7 @@
         <div class="contact-items">
           <div class="contact-item">
             <div class="ci-icon"><i class="fa fa-map-marker-alt"></i></div>
-            <div><h4>Location</h4><p>Noida, Uttar Pradesh, IN</p></div>
+            <div><h4>Location</h4><p>Noida, Uttar Pradesh, India</p></div>
           </div>
           <div class="contact-item">
             <div class="ci-icon"><i class="fa fa-envelope"></i></div>
